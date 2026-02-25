@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -6,41 +8,77 @@
 
 body {
   background: #000;
-  color: #f5f5f5;
-  font-family: Helvetica, Arial, sans-serif;
+  color: #f2f2f2;
+  font-family: 'Syne', sans-serif;
   overflow-x: hidden;
   transition: filter 0.6s ease;
+  position: relative;
 }
+
+/* --- Grain Overlay --- */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  opacity: 0.08;
+  mix-blend-mode: overlay;
+  z-index: 999;
+}
+
+/* --- Layout --- */
 
 section {
   min-height: 100vh;
-  padding: 8rem 10vw;
+  padding: 10vh 8vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
+/* --- Hero --- */
+
 .hero {
-  text-align: center;
+  text-align: left;
 }
 
 .title {
-  font-size: 6vw;
-  letter-spacing: 0.1em;
+  font-size: clamp(5rem, 14vw, 16rem);
+  font-weight: 800;
+  line-height: 0.85;
+  letter-spacing: -0.05em;
 }
 
 .tagline {
   margin-top: 1rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   opacity: 0.6;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
 }
 
-.statement h2,
-.music h2,
-.shop h2 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+/* --- Headers --- */
+
+h2 {
+  font-size: clamp(2.5rem, 7vw, 6rem);
+  font-weight: 700;
+  line-height: 0.95;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.03em;
 }
+
+/* --- Text --- */
+
+p {
+  max-width: 700px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+/* --- Gallery --- */
 
 .gallery {
   display: flex;
@@ -49,19 +87,22 @@ section {
 
 .image-block {
   flex: 1;
-  height: 60vh;
+  height: 70vh;
   background: #111;
-  transition: transform 0.4s ease;
+  transition: transform 0.5s ease, filter 0.5s ease;
 }
 
 .image-block:hover {
-  transform: scale(1.05);
+  transform: scale(1.04);
+  filter: contrast(1.2);
 }
+
+/* --- Fade In --- */
 
 .fade-section {
   opacity: 0;
   transform: translateY(40px);
-  transition: all 0.8s ease;
+  transition: all 0.9s ease;
 }
 
 .fade-section.visible {
@@ -69,9 +110,17 @@ section {
   transform: translateY(0);
 }
 
+/* --- Brutalist Inversion --- */
+
+.invert {
+  background: #f2f2f2;
+  color: #000;
+}
+
+/* --- Footer --- */
+
 footer {
-  padding: 4rem 10vw;
-  text-align: center;
+  padding: 4rem 8vw;
   font-size: 0.8rem;
   opacity: 0.4;
 }
