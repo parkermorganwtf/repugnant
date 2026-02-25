@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap');
-
 * {
   margin: 0;
   padding: 0;
@@ -11,20 +9,19 @@ body {
   color: #f2f2f2;
   font-family: 'Syne', sans-serif;
   transition: filter 0.6s ease;
-  position: relative;
 }
 
-/* Grain Overlay */
+/* Static Video */
 
-body::before {
-  content: "";
+#static-bg {
   position: fixed;
   inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.12;
+  z-index: -1;
   pointer-events: none;
-  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
-  opacity: 0.08;
-  mix-blend-mode: overlay;
-  z-index: 999;
 }
 
 /* Layout */
@@ -39,20 +36,12 @@ section {
 
 /* Hero */
 
-.hero {
-  text-align: left;
-}
-
 .title {
   font-size: clamp(4rem, 12vw, 14rem);
   font-weight: 800;
   line-height: 0.85;
   letter-spacing: -0.05em;
-  max-width: 100%;
-  word-break: break-word;
 }
-
-/* Tagline */
 
 .tagline {
   margin-top: 1rem;
@@ -69,7 +58,6 @@ h2 {
   font-weight: 700;
   line-height: 0.95;
   margin-bottom: 1.5rem;
-  letter-spacing: -0.03em;
 }
 
 /* Text */
@@ -78,7 +66,7 @@ p {
   max-width: 700px;
   font-size: 1.1rem;
   line-height: 1.6;
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 /* Gallery */
@@ -93,12 +81,11 @@ p {
   flex: 1 1 45%;
   height: 70vh;
   background: #111;
-  transition: transform 0.5s ease, filter 0.5s ease;
+  transition: transform 0.5s ease;
 }
 
 .image-block:hover {
   transform: scale(1.04);
-  filter: contrast(1.2);
 }
 
 /* Fade In */
@@ -114,7 +101,7 @@ p {
   transform: translateY(0);
 }
 
-/* Inversion Section */
+/* Inversion */
 
 .invert {
   background: #f2f2f2;
