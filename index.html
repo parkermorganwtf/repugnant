@@ -1,72 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Parker Morgan</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>REPUGNANT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: black;
+      color: white;
+    }
+
+    .hero {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 35% center;
+      filter: brightness(65%) contrast(110%);
+    }
+
+    .overlay {
+      position: absolute;
+      bottom: 8%;
+      left: 5%;
+    }
+
+    .overlay h1 {
+      font-size: 4rem;
+      margin: 0;
+      letter-spacing: 0.1em;
+    }
+
+    .overlay p {
+      margin-top: 10px;
+      letter-spacing: 0.3em;
+      font-size: 0.8rem;
+      opacity: 0.8;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      letter-spacing: 0.2em;
+      transition: opacity 0.2s ease;
+    }
+
+    .nav a:hover {
+      opacity: 0.5;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.7rem;
+      opacity: 0.5;
+    }
+  </style>
 </head>
+
 <body>
 
-  <video autoplay muted loop playsinline id="static-bg">
-    <source src="https://cdn.coverr.co/videos/coverr-old-tv-static-1600/1080p.mp4" type="video/mp4">
-  </video>
-
   <section class="hero">
-    <h1 class="title">PARKER<br>MORGAN</h1>
-    <p class="tagline">Repugnant™</p>
-  </section>
+    <img src="pyromania-pm-bg-img.jpg" alt="Parker">
 
-  <section class="statement fade-section">
-    <h2>JUST LIKE US</h2>
-    <p>
-      Queer nightlife propaganda.  
-      Bubblegum meets concrete.  
-      Performance art disguised as survival.
-    </p>
-  </section>
-
-  <!-- SHOP SECTION -->
-  <section class="shop fade-section">
-    <h2>SHOP</h2>
-
-    <div class="product-grid">
-
-      <div class="product">
-        <div class="product-img" style="background:url('https://picsum.photos/800/900?random=3') center/cover;"></div>
-        <h3>REPUGNANT TEE</h3>
-        <p>$48</p>
-      </div>
-
-      <div class="product">
-        <div class="product-img" style="background:url('https://picsum.photos/800/900?random=4') center/cover;"></div>
-        <h3>BITTEN FRUIT CAP</h3>
-        <p>$38</p>
-      </div>
-
-      <div class="product">
-        <div class="product-img" style="background:url('https://picsum.photos/800/900?random=5') center/cover;"></div>
-        <h3>33 FOREVER POSTER</h3>
-        <p>$25</p>
-      </div>
-
+    <div class="overlay">
+      <h1>REPUGNANT</h1>
+      <p>music / image / control</p>
     </div>
   </section>
 
-  <section class="statement fade-section invert">
-    <h2>FOR: BITTEN FRUIT</h2>
-    <p>
-      Attractive. Charismatic. 33.  
-      Forever-alone comedy of errors.  
-      Still selling it beautifully.
-    </p>
-  </section>
+  <div class="nav">
+    <a href="#">LISTEN</a>
+    <a href="#">WATCH</a>
+    <a href="#">CONTACT</a>
+  </div>
 
-  <footer>
-    <p>© 2026 PARKER MORGAN — NEW YORK</p>
-  </footer>
+  <div class="footer">
+    © REPUGNANT
+  </div>
 
-  <script src="script.js"></script>
 </body>
 </html>
