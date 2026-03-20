@@ -5,15 +5,20 @@
   <title>REPUGNANT</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
   <style>
     body, html {
       margin: 0;
       padding: 0;
-      font-family: Arial, Helvetica, sans-serif;
       background: black;
       color: white;
+      font-family: 'Inter', Arial, sans-serif;
+      overflow-x: hidden;
     }
 
+    /* HERO /
     .hero {
       position: relative;
       height: 100vh;
@@ -26,53 +31,85 @@
       height: 100%;
       object-fit: cover;
       object-position: 35% center;
-      filter: brightness(65%) contrast(110%);
+      filter: brightness(55%) contrast(115%) saturate(110%);
+    }
+
+    / DARK OVERLAY FOR DEPTH /
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.85));
     }
 
     .overlay {
       position: absolute;
       bottom: 8%;
       left: 5%;
+      z-index: 2;
     }
 
     .overlay h1 {
-      font-size: 4rem;
+      font-family: 'Oswald', sans-serif;
+      font-size: 5rem;
+      letter-spacing: 0.2em;
       margin: 0;
-      letter-spacing: 0.1em;
+      font-weight: 600;
+      text-transform: uppercase;
+      text-shadow: 0 0 10px rgba(255,255,255,0.15);
     }
 
     .overlay p {
-      margin-top: 10px;
-      letter-spacing: 0.3em;
-      font-size: 0.8rem;
-      opacity: 0.8;
+      margin-top: 12px;
+      letter-spacing: 0.4em;
+      font-size: 0.75rem;
+      opacity: 0.7;
     }
 
+    / NAV /
     .nav {
       display: flex;
       justify-content: center;
-      gap: 40px;
-      padding: 40px 20px;
+      gap: 50px;
+      padding: 50px 20px;
       text-align: center;
     }
 
     .nav a {
       color: white;
       text-decoration: none;
-      font-size: 1rem;
-      letter-spacing: 0.2em;
-      transition: opacity 0.2s ease;
+      font-size: 0.9rem;
+      letter-spacing: 0.25em;
+      transition: all 0.25s ease;
+      position: relative;
+    }
+
+    .nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0%;
+      height: 1px;
+      background: white;
+      transition: width 0.25s ease;
     }
 
     .nav a:hover {
-      opacity: 0.5;
+      opacity: 0.6;
     }
 
+    .nav a:hover::after {
+      width: 100%;
+    }
+
+    / FOOTER */
     .footer {
       text-align: center;
       padding: 40px 20px;
-      font-size: 0.7rem;
-      opacity: 0.5;
+      font-size: 0.65rem;
+      opacity: 0.4;
+      letter-spacing: 0.2em;
     }
   </style>
 </head>
