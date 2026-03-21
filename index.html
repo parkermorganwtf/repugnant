@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=BBH+Bartle&display=swap" rel="stylesheet">
 
   <style>
-    body, html {
+    html, body {
       margin: 0;
       padding: 0;
       background: black;
@@ -19,60 +19,57 @@
       font-family: Arial, Helvetica, sans-serif;
     }
 
+    /* HERO WRAPPER /
     .hero {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
 
-.hero img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 40% center;
-  display: block;
-}
+    / IMAGE (POSTER STYLE) /
+    .hero img {
+      max-width: 95%;
+      max-height: 75vh;
+      height: auto;
+      width: auto;
+      display: block;
+      filter: brightness(75%) contrast(110%);
+    }
 
-    .question {
-      padding: 80px 20px;
+    / TITLE BELOW IMAGE /
+    .title {
+      margin-top: 20px;
       text-align: center;
-      background: black;
+    }
+
+    .title h1 {
+      font-family: "BBH Bartle", sans-serif;
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      letter-spacing: 0.05em;
+      margin: 0;
+    }
+
+    / QUESTION /
+    .question {
+      padding: 60px 20px;
+      text-align: center;
     }
 
     .question p {
-      font-size: 1rem;
+      font-size: 0.95rem;
       letter-spacing: 0.15em;
       opacity: 0.8;
     }
 
-    .overlay {
-      position: absolute;
-      bottom: 8%;
-      left: 5%;
-      right: 5%;
-    }
-
-    .overlay h1 {
-      font-family: "BBH Bartle", sans-serif;
-      font-size: clamp(2rem, 6vw, 4rem);
-      margin: 0;
-      letter-spacing: 0.03em;
-      line-height: 0.95;
-    }
-
-    .overlay p {
-      margin-top: 14px;
-      font-size: 0.7rem;
-      letter-spacing: 0.3em;
-      opacity: 0.6;
-    }
-
+    / NAV /
     .nav {
       display: flex;
       justify-content: center;
-      gap: 50px;
-      padding: 50px 20px;
+      gap: 40px;
+      padding: 40px 20px;
     }
 
     .nav a {
@@ -87,6 +84,7 @@
       opacity: 0.4;
     }
 
+    / FOOTER */
     .footer {
       text-align: center;
       padding: 30px;
@@ -102,16 +100,15 @@
   <section class="hero">
     <img src="pyromania-pm-bg-img.jpg" alt="Parker">
 
-    <div class="overlay">
+    <div class="title">
       <h1>REPUGNANT</h1>
-      
     </div>
   </section>
 
   <div class="question">
-  <p>who the fuck is Parker Morgan?</p>
-    </div>
-  
+    <p>who the fuck is Parker Morgan?</p>
+  </div>
+
   <div class="nav">
     <a href="#">LISTEN</a>
     <a href="#">WATCH</a>
