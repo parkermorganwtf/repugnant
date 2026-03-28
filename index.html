@@ -19,52 +19,42 @@
       font-family: Arial, Helvetica, sans-serif;
     }
 
-    /* HERO WRAPPER /
     .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      padding: 20px;
+      position: relative;
+      width: 100%;
     }
 
-    / IMAGE (POSTER STYLE) /
     .hero img {
-      max-width: 95%;
-      max-height: 75vh;
+      width: 100%;
       height: auto;
-      width: auto;
       display: block;
       filter: brightness(75%) contrast(110%);
     }
 
-    / TITLE BELOW IMAGE /
-    .title {
-      margin-top: 20px;
-      text-align: center;
+    .overlay {
+      position: absolute;
+      bottom: 6%;
+      left: 4%;
     }
 
-    .title h1 {
+    .overlay h1 {
       font-family: "BBH Bartle", sans-serif;
-      font-size: clamp(2rem, 6vw, 3.5rem);
-      letter-spacing: 0.05em;
+      font-size: clamp(2rem, 5vw, 3.2rem);
       margin: 0;
+      letter-spacing: 0.05em;
     }
 
-    / QUESTION /
     .question {
       padding: 60px 20px;
       text-align: center;
     }
 
     .question p {
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       letter-spacing: 0.15em;
       opacity: 0.8;
     }
 
-    / NAV /
     .nav {
       display: flex;
       justify-content: center;
@@ -84,7 +74,6 @@
       opacity: 0.4;
     }
 
-    / FOOTER */
     .footer {
       text-align: center;
       padding: 30px;
@@ -100,7 +89,7 @@
   <section class="hero">
     <img src="pyromania-pm-bg-img.jpg" alt="Parker">
 
-    <div class="title">
+    <div class="overlay">
       <h1>REPUGNANT</h1>
     </div>
   </section>
